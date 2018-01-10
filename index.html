@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>钻城卡盟</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+
+<body>
+	<!--头部-->
+	<header class="clearfix">
+		<div class="logo l">
+			<img src="images/logo.png"/>
+		</div>
+		<div class="r box">
+			<div class="login hide">
+				<dl class="clearfix">
+					<dt class="l"><a href="javascript:;"><img src="images/qqs.png"/></a></dt>
+					<dd class="l">
+						<a href="javascript:;">登录</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="user">
+				<ul class="clearfix">
+					<li class="search l"><a href="javascript:;"><img src="images/fdj.png"/></a></li>
+					<li class="menu l"><a href="javascript:;"><img src="images/menu.png"/></a></li>
+					<li class="users l"><a href="javascript:;"><img src="images/users.png"/><span></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="banner">
+		<div class="swiper-container bans">
+	      	<div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<a href="javascript:;"><img src="images/111.jpg" alt=""> </a>
+		        </div>
+		        <div class="swiper-slide"> 
+		        	<a href="javascript:;"><img src="images/111.jpg" alt=""> </a>
+		        </div>	
+		        <div class="swiper-slide"> 
+		        	<a href="javascript:;"><img src="images/111.jpg" alt=""> </a>
+		        </div>	
+		    </div>
+	    </div>
+	    <div class="pagination"></div>
+	</div>
+</body>
+<script src="js/plugins/jquery.js"></script>
+<script src="js/plugins/rem.js"></script>
+<script src="js/plugins/swiper.jquery.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		var swiper = new Swiper('.bans', {
+	        pagination: '.pagination',
+	        paginationClickable: true,
+	        spaceBetween: 30,
+	        loop:true,
+	        autoplay: 3000,
+	        autoplayDisableOnInteraction : true		        
+	    });
+	    $(".bans").mouseenter(function(){
+	    	swiper.stopAutoplay();
+	    }).mouseout(function(){
+	    	swiper.startAutoplay();
+	    });
+	})
+</script>
+</html>
